@@ -17,6 +17,9 @@ jobs:
         with:
           go-version: 1.18
 
+      - name: go mod vendor
+        run: go mod vendor
+
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v4
         with:
