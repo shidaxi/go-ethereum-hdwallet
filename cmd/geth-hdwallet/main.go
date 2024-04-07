@@ -32,6 +32,12 @@ func main() {
 		log.Fatal(err)
 	}
 
+	publicKey, err := wallet.PublicKeyHex(account)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	fmt.Println("public address:", account.Address.Hex())
 	fmt.Println("private key:", privateKey)
+	fmt.Println("public key:", publicKey)
 }
